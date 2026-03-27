@@ -31,7 +31,7 @@ def buscar_pagina(path):
         print("URL:", url)
         print("STATUS:", res.status_code)
 
-        res.raise_for_status()  # erro se não for 200
+        res.raise_for_status()
 
         return res.json()
 
@@ -106,7 +106,7 @@ def main():
     if df.empty:
         print("DataFrame vazio")
     else:
-        df.to_csv("apartamentos_rio.csv", index=False, sep=";", encoding="utf-8-sig")
+        df.to_csv("apartamentos_scrap.csv", index=False, sep=";", encoding="utf-8-sig")
         print("Scrap concluído e salvo!")
 
 
