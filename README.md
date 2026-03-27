@@ -80,3 +80,4 @@ Significa que a aplicação percorreu por todo arquivo json, portanto, finaliza 
 Nesse arquivo você consegue visualizar a base com todos os condôminios da cidade filtrada.
 
 ## Autor
+Pedro Kurtz
