@@ -1,11 +1,12 @@
 import requests
 import pandas as pd
 import time
+import re
 
 # essa aplicação é um scrap do site apto.vc
 # consulte a documentação para o scrap de outros sites
 
-BUILD_ID = "KD41YWHMuzlPQhhefsn7D"
+BUILD_ID = "c4CV659C9opeV5h-S4PrC"
 
 HEADERS = {
     "x-nextjs-data": "1",
