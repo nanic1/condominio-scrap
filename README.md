@@ -1,5 +1,7 @@
 # Condomínio Scrap
 
+**ESSE README ATUALMENTE ENCONTRA-SE DESATUALIZADO, AGUARDAR POR MAIS INFORMAÇÕES**
+
 Esta aplicação realiza scraping de condomínios de diversos sites. A aplicação coleta todos os condomínios na pagina via request e armazena em um arquivo Excel formatado.
 
 ---
@@ -51,8 +53,6 @@ base_path = "/br/rj/rio-de-janeiro"
 ```
 base_path = "/br/sp/sao-paulo"
 ```
-
-O apto.vc não fornece cobertura para todos os estados e cidades. Consultar o [apto.vc](https://apto.vc/) para mais informações.
 
 ### 4- Execute a aplicação
 No terminal, execute:
