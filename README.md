@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 # Scrap Condomínios
+=======
+# Condomínio Scrap
+>>>>>>> cbc0f2347fdbc9714d0e2b86b0e51aa85461a304
 
-Esta aplicação realiza scraping de condomínios do site [Apto.vc](https://apto.vc/). A aplicação coleta todos os condomínios na pagina via request e armazena em um arquivo Excel formatado.
+**ESSE README ATUALMENTE ENCONTRA-SE DESATUALIZADO, AGUARDAR POR MAIS INFORMAÇÕES**
+
+Esta aplicação realiza scraping de condomínios de diversos sites. A aplicação coleta todos os condomínios na pagina via request e armazena em um arquivo Excel formatado.
 
 ---
 
@@ -56,8 +62,6 @@ url = "https://apto.vc/_next/data/c4CV659C9opeV5h-S4PrC/br/rj/rio-de-janeiro.jso
 ```
 url = "https://apto.vc/_next/data/c4CV659C9opeV5h-S4PrC/br/sp/sao-paulo.json?"
 ```
-
-O apto.vc não fornece cobertura para todos os estados e cidades. Consultar o [apto.vc](https://apto.vc/) para mais informações.
 
 ### 4- Execute a aplicação
 No terminal, execute:
