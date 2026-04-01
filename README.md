@@ -1,10 +1,10 @@
-# Scraper Apto.vc
+# Scrap Condomínios
 
 Esta aplicação realiza scraping de condomínios do site [Apto.vc](https://apto.vc/). A aplicação coleta todos os condomínios na pagina via request e armazena em um arquivo Excel formatado.
 
 ---
 
-## Tecnologias usadas
+## Tecnologias necessárias
 * Python
 * Pandas
 * Requests
@@ -23,33 +23,38 @@ Esta aplicação realiza scraping de condomínios do site [Apto.vc](https://apto
 * Status
 * Link para mais informações
 
+---
+
 ## Como executar o projeto
-### 1- Clone este repositório para o seu computador.
-No seu terminal, execute:
+### 1- Clone este repositório para o seu computador
+No terminal do seu computador, execute:
+
 ```
-git clone https://github.com/nanic1/aptovc-scrap
-cd aptovc-scrap
+git clone https://github.com/nanic1/condominio-scrap
+cd condominio-scrap
 ```
 
 ### 2- Instale as dependências necessárias
-Ainda no terminal, execute:
+Dentro do projeto, execute no terminal:
 
 ```
 pip install pandas
 ```
 
+É necessário ter o Python instalado para executar o projeto e instalar as dependências.
+
 ### 3- Defina a cidade que deseja filtar
-Com o código aberto, na função main, mude o **base_path** para o UF e cidade que deseja filtrar. **NÃO** use acentos no caminho.
+Com o código aberto, na função main, mude o **url** para o UF e cidade que deseja filtrar. **NÃO** use acentos no caminho.
 
 Ex:
 * Filtro Rio de Janeiro
 ```
-base_path = "/br/rj/rio-de-janeiro"
+url = "https://apto.vc/_next/data/c4CV659C9opeV5h-S4PrC/br/rj/rio-de-janeiro.json?"
 ```
 
 * Filtro São Paulo
 ```
-base_path = "/br/sp/sao-paulo"
+url = "https://apto.vc/_next/data/c4CV659C9opeV5h-S4PrC/br/sp/sao-paulo.json?"
 ```
 
 O apto.vc não fornece cobertura para todos os estados e cidades. Consultar o [apto.vc](https://apto.vc/) para mais informações.
@@ -64,27 +69,23 @@ python app.py
 Se tudo correr bem, a aplicação vai exibir no terminal algo parecido com:
 
 ```
-Página 1
-PATH: /br/{UF}/{cidade}
-URL: https://apto.vc/_next/data/KD41YWHMuzlPQhhefsn7D/br/{UF}/{cidade}.json
+Página: 1
 STATUS: 200
-12 imóveis
+12 imóveis encontrados na página 1
 ```
 
 Significa que o app está verificando todos os imóveis de cada página. Assim que ele chegar a última página, vai exibir isso no terminal:
 
 ```
-Página X
-PATH: /br/rj/rio-de-janeiro?page=X
-URL: https://apto.vc/_next/data/KD41YWHMuzlPQhhefsn7D/br/rj/rio-de-janeiro.json?page=X
+Página: 27
 STATUS: 404
-Erro HTTP: 404 Client Error: Not Found for url: https://apto.vc/_next/data/KD41YWHMuzlPQhhefsn7D/br/rj/rio-de-janeiro.json?page=X
-Página não contém dados. Encerrando aplicação...
-Scrap concluído e salvo!
+Erro: 404 Client Error: Not Found for url: https://apto.vc/_next/data/c4CV659C9opeV5h-S4PrC/br/rj/rio-de-janeiro.json??page=27
+Erro ao buscar a página. Encerrando...
+Scrap realizado com sucesso!
 ```
 
-Significa que a aplicação percorreu por todo arquivo json, portanto, finaliza a aplicação e salva os dados obtidos formatados em um arquivo CSV chamado **apartamentos_scrap.csv** 
-Nesse arquivo você consegue visualizar a base com todos os condôminios da cidade filtrada.
+Significa que a aplicação não achou dados nenhum na página, portanto, finaliza a aplicação e salva os dados obtidos formatados em um arquivo CSV chamado **base_apto.xlsx** 
+Nesse arquivo você consegue visualizar a base com todos os condomínios da cidade filtrada.
 
 ## Autor
 Pedro Kurtz
